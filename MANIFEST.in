@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include castlecraft_auth *.css
+recursive-include castlecraft_auth *.csv
+recursive-include castlecraft_auth *.html
+recursive-include castlecraft_auth *.ico
+recursive-include castlecraft_auth *.js
+recursive-include castlecraft_auth *.json
+recursive-include castlecraft_auth *.md
+recursive-include castlecraft_auth *.png
+recursive-include castlecraft_auth *.py
+recursive-include castlecraft_auth *.svg
+recursive-include castlecraft_auth *.txt
+recursive-exclude castlecraft_auth *.pyc
