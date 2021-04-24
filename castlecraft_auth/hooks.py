@@ -180,7 +180,4 @@ user_data_fields = [
 # Authentication and authorization
 # --------------------------------
 
-# auth_hooks = [
-# 	"castlecraft_auth.auth.validate"
-# ]
-
+auth_hooks = ["castlecraft_auth.auth.validate"]

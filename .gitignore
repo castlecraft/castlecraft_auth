@@ -4,3 +4,16 @@
 *.swp
 tags
 castlecraft_auth/docs/current
+*.py~
+.DS_Store
+conf.py
+locale
+latest_updates.json
+.wnf-lang-status
+dist/
+*.swo
+__pycache__
+*~
+.idea/
+.vscode/
+node_modules/
