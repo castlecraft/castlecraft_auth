@@ -29,15 +29,29 @@ Make following changes in `site_config.json` or `common_site_config.json` as per
 ```json
 {
  ...
- "castlecraft_jwks_url": "https://accounts.example.com/.well-known/jwks",
  "castlecraft_allowed_aud": ["client_id_or_allowed_aud_claim"],
- "castlecraft_create_user_on_auth": 1
+ "castlecraft_auth_introspect_bearer": 1,
+ "castlecraft_auth_jwt": 0,
+ "castlecraft_client_id": "client_id_or_allowed_aud_claim",
+ "castlecraft_client_secret": "client_secret",
+ "castlecraft_create_user_on_auth": 1,
+ "castlecraft_introspect_token_key": "access_token",
+ "castlecraft_introspect_url": "https://accounts.example.com/oauth2/introspection",
+ "castlecraft_jwks_url": "https://accounts.example.com/.well-known/jwks",
+ "castlecraft_userinfo_url": "https://accounts.example.com/oauth2/profile"
 }
 ```
 
-- `castlecraft_jwks_url`: JWKS Url to verify `id_token` signature (asymmetric).
-- `castlecraft_allowed_aud`: Array of allowed audience claim in `id_token`.
+- `castlecraft_allowed_aud`: Array of allowed audience claim in `id_token`. Generally `client_id`
+- `castlecraft_auth_introspect_bearer`: When set to `1`, .
+- `castlecraft_auth_jwt`: When set to `1`, .
+- `castlecraft_client_id`: Registered `client_id`.
+- `castlecraft_client_secret`: Registered `client_secret`.
 - `castlecraft_create_user_on_auth`: When set to `1`, user with no roles will be created if not found in system.
+- `castlecraft_introspect_token_key`: Key used to pass token to introspection endpoint. Defaults to `token`. Example request will have `token=abc123`.
+- `castlecraft_introspect_url`: Token introspection url.
+- `castlecraft_jwks_url`: JWKS Url to verify `id_token` signature (asymmetric).
+- `castlecraft_userinfo_url`: User info url.
 
 ## License
 
